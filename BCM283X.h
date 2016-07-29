@@ -36,8 +36,8 @@ public:
     void endSPI();
     void close();
     uint8_t transfer(uint8_t value);
-    void transfern(char *buff, uint32_t lenght);
-    void transferb(char *rxBuff, char *txBuff, uint32_t lenght);
+    void transfern(uint8_t *buff, uint32_t lenght);
+    void transferb(uint8_t *rxBuff, uint8_t *txBuff, uint32_t lenght);
 private:
     SPIConf spiConfiguration;
     void _beginSPI(uint8_t bitOrder, uint16_t clockDivender, uint8_t dataMode,

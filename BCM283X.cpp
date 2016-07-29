@@ -56,10 +56,10 @@ void BCM283X::endSPI(){
 uint8_t transfer(uint8_t value){
     return bcm2835_spi_transfer(value);
 }
-void transfern(char *buff, uint32_t lenght){
+void transfern(uint8_t *buff, uint32_t lenght){
     bcm2835_spi_transfern(buff, lenght);
 }
-void transferb(char *rxBuff, char *txBuff, uint32_t lenght){
+void transferb(uint8_t *rxBuff, uint8_t *txBuff, uint32_t lenght){
     bcm2835_spi_transfernb(txBuff, rxBuff, lenght);
 }
 
